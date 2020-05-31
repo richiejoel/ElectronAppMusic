@@ -1,4 +1,23 @@
 @import "../../../scss/index.scss";
 
-.add-song-form {
+.ui.form.add-song-form {
+  .dropdown {
+    i {
+      width: 16px !important;
+      height: 11px !important;
+    }
+    .flag {
+      width: 16px !important;
+      height: 11px !important;
+      img {
+        width: 16px !important;
+        height: 11px !important;
+      }
+    }
+    img {
+      width: 30px !important;
+      height: 30px !important;
+      border-radius: 0;
+    }
+  }
 }
