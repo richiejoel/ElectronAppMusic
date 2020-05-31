@@ -20,24 +20,25 @@ export default function LoggedLayout(props) {
     });
   };
 
-  const image1 =
+  /* const image1 =
     "https://firebasestorage.googleapis.com/v0/b/musicfy-5f41a.appspot.com/o/album%2F7dd8ff95-a72d-4f8f-8ab5-25bb99bc78f0?alt=media&token=e76a1c80-021f-4875-9d66-5b8f92ba2547";
   const name1 = "Adore you";
   const url1 =
     "https://firebasestorage.googleapis.com/v0/b/musicfy-5f41a.appspot.com/o/song%2FHarryStyles-AdoreYou.mp3?alt=media&token=1f7300bb-1de6-46fb-89a1-22ffbe054719";
-
+*/
   return (
     <Router>
       <Grid className="logged-layout">
         <Grid.Row>
           <Grid.Column width={3}>
-            <Button
+            {/*<Button
+              style={{ display: "none" }}
               onClick={() => {
                 playerSong(image1, name1, url1);
               }}
             >
               START
-            </Button>
+            </Button>*/}
             <MenuLeft user={user} />
           </Grid.Column>
           <Grid.Column className="content" width={13}>
