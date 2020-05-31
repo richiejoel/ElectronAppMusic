@@ -18,7 +18,7 @@ export default function Player(props) {
   const [playing, setPlaying] = useState(false);
   const [volume, setVolume] = useState(0.3);
 
-  console.log(volume);
+  //console.log(volume);
 
   const onStart = async () => {
     await setPlaying(true);
