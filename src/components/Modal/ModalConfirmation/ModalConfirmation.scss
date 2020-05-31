@@ -1,0 +1,38 @@
+@import "../../../scss/index.scss";
+
+.ui.modal.modal-confirmation {
+  background-color: $background-grey;
+  border-radius: 12px;
+
+  .header {
+    text-align: center;
+    color: $font-light;
+    background-color: transparent;
+    h3 {
+      margin: 0;
+    }
+    i {
+      position: absolute;
+      right: 10px;
+      top: 16px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .content {
+    color: $font-light;
+    background-color: transparent;
+  }
+
+  .actions {
+    color: $font-light;
+    background-color: transparent;
+
+    .green:hover {
+      background-color: $primary-color-hover;
+    }
+  }
+}

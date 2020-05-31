@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope
+    xmlns:SOAP-ENV="http://www.w3.org/2003/05/soap-envelope"
+    xmlns:e="http://www.technisys.net/cmm/services/errors/v1.0"
+    xmlns:md="http://www.technisys.net/cmm/services/metadata/v2.0"
+    xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+    xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+    <SOAP-ENV:Header>
+        <md:metadata>
+            <traceNumber>1448839.3816862</traceNumber>
+            <serviceId>massiveSelectCreditCardParamsDeferred</serviceId>
+            <serviceVersion>1.0</serviceVersion>
+            <sessionId>2skJ6TA7YRyk1t9pTFS7yYWFLrS3Ai3iYo7T2ImAJV6M5MkN-pd5!-1793836670!1589304176699</sessionId>
+            <targetChannel>
+                <mnemonic>IN</mnemonic>
+            </targetChannel>
+            <executingChannel>
+                <mnemonic>IN</mnemonic>
+            </executingChannel>
+            <address>ip=200.7.194.226;</address>
+            <organizationId>uriTech=EMPRESA@2289690;uriSFB=Cedula#1900678432;</organizationId>
+            <executingOperatorId>uriTech=OPERADOR_EMPRESA@2289697;uriSFB=Cedula#1900678432;OWNER=true;userName=evolutivo03;</executingOperatorId>
+            <terminalId>host=ET0001;</terminalId>
+            <featureId>ROL@5098</featureId>
+            <locale>es_CR</locale>
+            <customProperties/>
+        </md:metadata>
+        <wsse:Security SOAP-ENV:mustUnderstand="true">
+            <saml2:Assertion ID="_ID1" IssueInstant="2014-04-16T21:44:56.855Z"
+
+        Version="2.0"
+                xmlns:saml2="urn:oasis:names:tc:SAML:2.0:assertion"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="saml2:AssertionType">
+                <saml2:Issuer>PacificoMultichannelProperties</saml2:Issuer>
+                <saml2:Subject>
+                    <saml2:SubjectConfirmation>
+                        <saml2:SubjectConfirmationData xsi:type="saml2:KeyInfoConfirmationDataType">
+                            <ds:KeyInfo
+                                xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+                                <ds:KeyAlias>Token</ds:KeyAlias>
+                                <ds:KeyValue>xxxxxxxxxxxx</ds:KeyValue>
+                            </ds:KeyInfo>
+                        </saml2:SubjectConfirmationData>
+                    </saml2:SubjectConfirmation>
+                    <saml2:SubjectConfirmation>
+                        <saml2:SubjectConfirmationData xsi:type="saml2:KeyInfoConfirmationDataType">
+                            <ds:KeyInfo
+                                xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+                                <ds:KeyAlias>userId</ds:KeyAlias>
+                                <ds:KeyValue>xxxxxxxxxxxx</ds:KeyValue>
+                            </ds:KeyInfo>
+                        </saml2:SubjectConfirmationData>
+                    </saml2:SubjectConfirmation>
+                    <saml2:SubjectConfirmation>
+                        <saml2:SubjectConfirmationData xsi:type="saml2:KeyInfoConfirmationDataType">
+                            <ds:KeyInfo
+                                xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+                                <ds:KeyAlias>password</ds:KeyAlias>
+                                <ds:KeyValue>xxxxxxxxxxxx</ds:KeyValue>
+                            </ds:KeyInfo>
+                        </saml2:SubjectConfirmationData>
+                    </saml2:SubjectConfirmation>
+                    <saml2:SubjectConfirmation>
+                        <saml2:SubjectConfirmationData xsi:type="saml2:KeyInfoConfirmationDataType">
+                            <ds:KeyInfo
+                                xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+                                <ds:KeyAlias>ip</ds:KeyAlias>
+                                <ds:KeyValue>xxxxxxxxxxxx</ds:KeyValue>
+                            </ds:KeyInfo>
+                        </saml2:SubjectConfirmationData>
+                    </saml2:SubjectConfirmation>
+                    <saml2:SubjectConfirmation>
+                        <saml2:SubjectConfirmationData xsi:type="saml2:KeyInfoConfirmationDataType">
+                            <ds:KeyInfo
+                                xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+                                <ds:KeyAlias>agencia</ds:KeyAlias>
+                                <ds:KeyValue>xxxxxxxxxxxx</ds:KeyValue>
+                            </ds:KeyInfo>
+                        </saml2:SubjectConfirmationData>
+                    </saml2:SubjectConfirmation>
+                    <saml2:SubjectConfirmation>
+                        <saml2:SubjectConfirmationData xsi:type="saml2:KeyInfoConfirmationDataType">
+                            <ds:KeyInfo
+                                xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+                                <ds:KeyAlias>Agencia</ds:KeyAlias>
+                                <ds:KeyValue>xxxxxxxxxxxx</ds:KeyValue>
+                            </ds:KeyInfo>
+                        </saml2:SubjectConfirmationData>
+                    </saml2:SubjectConfirmation>
+                    <saml2:SubjectConfirmation>
+                        <saml2:SubjectConfirmationData xsi:type="saml2:KeyInfoConfirmationDataType">
+                            <ds:KeyInfo
+                                xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+                                <ds:KeyAlias>localidad</ds:KeyAlias>
+                                <ds:KeyValue>xxxxxxxxxxxx</ds:KeyValue>
+                            </ds:KeyInfo>
+                        </saml2:SubjectConfirmationData>
+                    </saml2:SubjectConfirmation>
+                    <saml2:SubjectConfirmation>
+                        <saml2:SubjectConfirmationData xsi:type="saml2:KeyInfoConfirmationDataType">
+                            <ds:KeyInfo
+                                xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+                                <ds:KeyAlias>autorizaEjecucion</ds:KeyAlias>
+                                <ds:KeyValue>xxxxxxxxxxxx</ds:KeyValue>
+                            </ds:KeyInfo>
+                        </saml2:SubjectConfirmationData>
+                    </saml2:SubjectConfirmation>
+                    <saml2:SubjectConfirmation>
+                        <saml2:SubjectConfirmationData xsi:type="saml2:KeyInfoConfirmationDataType">
+                            <ds:KeyInfo
+                                xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+                                <ds:KeyAlias>autorizaEjecucionTC</ds:KeyAlias>
+                                <ds:KeyValue>xxxxxxxxxxxx</ds:KeyValue>
+                            </ds:KeyInfo>
+                        </saml2:SubjectConfirmationData>
+                    </saml2:SubjectConfirmation>
+                    <saml2:SubjectConfirmation>
+                        <saml2:SubjectConfirmationData xsi:type="saml2:KeyInfoConfirmationDataType">
+                            <ds:KeyInfo
+                                xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+                                <ds:KeyAlias>autorizaEjecucionTCINT</ds:KeyAlias>
+                                <ds:KeyValue>xxxxxxxxxxxx</ds:KeyValue>
+                            </ds:KeyInfo>
+                        </saml2:SubjectConfirmationData>
+                    </saml2:SubjectConfirmation>
+                    <saml2:SubjectConfirmation>
+                        <saml2:SubjectConfirmationData xsi:type="saml2:KeyInfoConfirmationDataType">
+                            <ds:KeyInfo
+                                xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+                                <ds:KeyAlias>idMensaje</ds:KeyAlias>
+                                <ds:KeyValue>xxxxxxxxxxxx</ds:KeyValue>
+                            </ds:KeyInfo>
+                        </saml2:SubjectConfirmationData>
+                    </saml2:SubjectConfirmation>
+                    <saml2:SubjectConfirmation>
+                        <saml2:SubjectConfirmationData xsi:type="saml2:KeyInfoConfirmationDataType">
+                            <ds:KeyInfo
+                                xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+                                <ds:KeyAlias>macAddress</ds:KeyAlias>
+                                <ds:KeyValue>xxxxxxxxxxxx</ds:KeyValue>
+                            </ds:KeyInfo>
+                        </saml2:SubjectConfirmationData>
+                    </saml2:SubjectConfirmation>
+                    <saml2:SubjectConfirmation>
+                        <saml2:SubjectConfirmationData xsi:type="saml2:KeyInfoConfirmationDataType">
+                            <ds:KeyInfo
+                                xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+                                <ds:KeyAlias>avatarUrl</ds:KeyAlias>
+                                <ds:KeyValue>xxxxxxxxxxxx</ds:KeyValue>
+                            </ds:KeyInfo>
+                        </saml2:SubjectConfirmationData>
+                    </saml2:SubjectConfirmation>
+                </saml2:Subject>
+            </saml2:Assertion>
+        </wsse:Security>
+    </SOAP-ENV:Header>
+    <SOAP-ENV:Body>
+        <srv:massiveSelectCreditCardParamsDeferredRequest
+            xmlns:srv="http://www.technisys.net/cmm/services/massiveSelectCreditCardParamsDeferred/rq/v1.0">
+            <service name="service">
+                <securityItemId>219</securityItemId>
+            </service>
+            <creditCard name="creditCard">
+                <generalType>DiferidoCuentasAlDia</generalType>
+            </creditCard>
+        </srv:massiveSelectCreditCardParamsDeferredRequest>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

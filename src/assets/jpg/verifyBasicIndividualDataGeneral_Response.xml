@@ -1,0 +1,61 @@
+<soap:Envelope
+    xmlns:e="http://www.technisys.net/cmm/services/errors/v1.0"
+    xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:soap="http://www.w3.org/2003/05/soap-envelope"
+    xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <soap:Header>
+        <md:metadata
+            xmlns:md="http://www.technisys.net/cmm/services/metadata/v2.0">
+            <organizationType>
+                <mnemonic/>
+            </organizationType>
+            <sourceTime/>
+            <institutionId>
+uriTech=EMPRESA@2610609;uriSFB=Cedula#1900678432;
+</institutionId>
+            <userId>
+uriTech=OPERADOR_EMPRESA@2610616;uriSFB=Cedula#1900678432;OWNER=true;userName=evolutivo3;
+</userId>
+            <institutionType/>
+            <terminalId>host=ET0001;</terminalId>
+            <channelDispatchDate/>
+            <address>ip=181.113.146.73;</address>
+            <organizationOperatorId/>
+            <organizationId>
+uriTech=EMPRESA@2610609;uriSFB=Cedula#1900678432;
+</organizationId>
+            <executingOperatorId>
+uriTech=OPERADOR_EMPRESA@2610616;uriSFB=Cedula#1900678432;OWNER=true;userName=evolutivo3;
+</executingOperatorId>
+            <featureId>ROL@5094</featureId>
+            <internals>
+                <serviceProviderEntityName>LOCAL</serviceProviderEntityName>
+                <serviceProviderName>NAOS</serviceProviderName>
+            </internals>
+            <executingChannel>
+                <mnemonic 	translationErrorDetail="No existe traduccion para el codigo 'IN' del enumerado 'executingChannel' con los parametros de busqueda establecidos (ServiceProviderEntity: LOCAL, ServiceProvider: NAOS)" translationErrorCode="UNDEFINED_TRANSLATION">IN</mnemonic>
+                <originalCodes>originalCode=IN;</originalCodes>
+                <internalValues>isAlias=false;</internalValues>
+            </executingChannel>
+            <locale>es_CR</locale>
+            <traceNumber>2662325.5264298</traceNumber>
+            <serviceId>verifyBasicIndividualDataGeneral</serviceId>
+            <serviceVersion>0.0</serviceVersion>
+            <sessionId>251DC8DB42E4CA8CF9B233C98BA80DEF</sessionId>
+            <channelId>IN</channelId>
+        </md:metadata>
+    </soap:Header>
+    <soap:Body>
+        <srv:verifyBasicIndividualDataGeneralResponse
+            xmlns:srv="http://www.technisys.net/cmm/services/verifyBasicIndividualDataGeneral/rs/v0.0">
+            <processResult 	name="processResult">
+                <code>0000</code>
+                <description>La transaccion se realizó exitosamente</description>
+                <durationTask>218</durationTask>
+                <type>EXITO</type>
+            </processResult>
+        </srv:verifyBasicIndividualDataGeneralResponse>
+    </soap:Body>
+</soap:Envelope>
