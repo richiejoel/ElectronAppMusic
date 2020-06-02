@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Grid } from "semantic-ui-react";
+import { Loader } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import { map } from "lodash";
 import firebase from "../../utils/Firebase";
@@ -11,6 +12,7 @@ const db = firebase.firestore(firebase);
 
 export default function Albums() {
   const [albums, setAlbums] = useState([]);
+  const [isLoadingPage, setIsLoadingPage] = useState(true);
 
   useEffect(() => {
     db.collection("albums")
@@ -23,9 +25,14 @@ export default function Albums() {
           arrayAlbums.push(data);
         });
         setAlbums(arrayAlbums);
+        setIsLoadingPage(false);
         console.log(arrayAlbums);
       });
   }, []);
+
+  if (isLoadingPage) {
+    return <Loader active>Cargando...</Loader>;
+  }
 
   return (
     <div className="albums">

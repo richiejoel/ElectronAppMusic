@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Grid } from "semantic-ui-react";
+import { Loader } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import { map } from "lodash";
 import firebase from "../../utils/Firebase";
@@ -11,6 +12,7 @@ const db = firebase.firestore(firebase);
 
 export default function Artists() {
   const [artists, setArtists] = useState([]);
+  const [isLoadingPage, setIsLoadingPage] = useState(true);
 
   useEffect(() => {
     db.collection("artists")
@@ -27,8 +29,13 @@ export default function Artists() {
           //console.log(arrayArtists);
         });
         setArtists(arrayArtists);
+        setIsLoadingPage(false);
       });
   }, []);
+
+  if (isLoadingPage) {
+    return <Loader active>Cargando...</Loader>;
+  }
 
   return (
     <div className="artists">
