@@ -11,14 +11,18 @@ import "./Player.scss";
   url: "",
 };*/
 
+//useLayoutEffect -> tener en cuenta hook
+
 export default function Player(props) {
   const { songData } = props;
   const [playedSeconds, setPlayedSeconds] = useState(0);
   const [totalSeconds, setTotalSeconds] = useState(0);
   const [playing, setPlaying] = useState(false);
   const [volume, setVolume] = useState(0.3);
+  const [repeat, setRepeat] = useState(false);
+  const [randomSong, setRandomSong] = useState(false);
 
-  //console.log(volume);
+  console.log(!songData ? false : songData.state);
 
   const onStart = () => {
     setPlaying(true);
@@ -28,6 +32,22 @@ export default function Player(props) {
     setPlaying(false);
   };
 
+  const onRepeat = () => {
+    if (!repeat) {
+      setRepeat(true);
+    } else {
+      setRepeat(false);
+    }
+  };
+
+  const onRandomSong = () => {
+    if (!randomSong) {
+      setRandomSong(true);
+    } else {
+      setRandomSong(false);
+    }
+  };
+
   const onProgress = (data) => {
     setPlayedSeconds(data.playedSeconds);
     setTotalSeconds(data.loadedSeconds);
@@ -35,7 +55,7 @@ export default function Player(props) {
 
   useEffect(() => {
     if (songData?.url) {
-      onStart();
+      //onStart();
       console.log("nana monita");
     }
   }, [songData]);
@@ -49,11 +69,33 @@ export default function Player(props) {
         </Grid.Column>
         <Grid.Column width={8} className="center">
           <div className="controls">
+            <Icon
+              onClick={onRandomSong}
+              className="icons-aditionals"
+              id={randomSong && "random-icon"}
+              name="random"
+            />
+            <Icon className="icons-aditionals" name="step backward" />
             {playing ? (
-              <Icon onClick={onPause} name="pause circle outline" />
+              <Icon
+                onClick={onPause}
+                className="icons-play"
+                name="pause circle outline"
+              />
             ) : (
-              <Icon onClick={onStart} name="play circle outline" />
+              <Icon
+                onClick={onStart}
+                className="icons-play"
+                name="play circle outline"
+              />
             )}
+            <Icon className="icons-aditionals" name="step forward" />
+            <Icon
+              onClick={onRepeat}
+              className="icons-aditionals"
+              id={repeat && "loop-icon"}
+              name="retweet"
+            />
           </div>
           <Progress
             progress="value"
@@ -81,6 +123,7 @@ export default function Player(props) {
         className="react-player"
         url={songData?.url}
         playing={playing}
+        loop={repeat}
         height="0"
         width="0"
         volume={volume}

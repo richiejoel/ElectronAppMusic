@@ -34,9 +34,25 @@
 
     .controls {
       margin-bottom: 10px;
+      justify-content: space-around;
+      display: flex;
+      width: 70%;
+
+      .icons-aditionals {
+        font-size: 18px !important;
+        &#loop-icon {
+          color: $primary-color;
+        }
+        &#random-icon {
+          color: $primary-color;
+        }
+      }
+
+      .icons-play {
+        font-size: 30px !important;
+      }
 
       i {
-        font-size: 30px !important;
         margin: 0 !important;
 
         &:hover {
