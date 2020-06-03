@@ -22,8 +22,6 @@ export default function Player(props) {
   const [repeat, setRepeat] = useState(false);
   const [randomSong, setRandomSong] = useState(false);
 
-  console.log(!songData ? false : songData.state);
-
   const onStart = () => {
     setPlaying(true);
   };
@@ -55,6 +53,7 @@ export default function Player(props) {
 
   useEffect(() => {
     if (songData?.url) {
+      //let boton = document.querySelector("#start").click();
       //onStart();
       console.log("nana monita");
     }
@@ -85,6 +84,7 @@ export default function Player(props) {
             ) : (
               <Icon
                 onClick={onStart}
+                id="start"
                 className="icons-play"
                 name="play circle outline"
               />
