@@ -10,7 +10,8 @@ import "./Home.scss";
 
 const db = firebase.firestore(firebase);
 
-export default function Home() {
+export default function Home(props) {
+  const { playerSong } = props;
   const [artists, setArtists] = useState([]);
   const [albums, setAlbums] = useState([]);
   const [songs, setSongs] = useState([]);
@@ -77,7 +78,11 @@ export default function Home() {
           folderImage="album"
           urlName="album"
         />
-        <SongsSlider title="Últimas Canciones" data={songs} />
+        <SongsSlider
+          title="Últimas Canciones"
+          data={songs}
+          playerSong={playerSong}
+        />
       </div>
     </>
   );

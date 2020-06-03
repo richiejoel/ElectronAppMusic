@@ -34,8 +34,8 @@ export default function Player(props) {
   };
 
   useEffect(() => {
-    if (songData?.url) {
-      //onStart();
+    if (songData?.urlSong) {
+      onStart();
       console.log("nana monita");
     }
   }, [songData]);
