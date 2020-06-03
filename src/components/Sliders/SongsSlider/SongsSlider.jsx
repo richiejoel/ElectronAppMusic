@@ -54,7 +54,7 @@ function Song(props) {
         albumTemp.id = response.id;
         setAlbum(albumTemp);
         getImage(albumTemp);
-        console.log(response.data());
+        //console.log(response.data());
       });
   }, [item]);
 
@@ -69,7 +69,7 @@ function Song(props) {
   };
 
   const onPlay = () => {
-    console.log("Play...");
+    //console.log("Play...");
     playerSong(banner, item.name, item.fileName);
   };
 
