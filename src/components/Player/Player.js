@@ -20,8 +20,8 @@ export default function Player(props) {
 
   //console.log(volume);
 
-  const onStart = async () => {
-    await setPlaying(true);
+  const onStart = () => {
+    setPlaying(true);
   };
 
   const onPause = () => {
@@ -34,7 +34,7 @@ export default function Player(props) {
   };
 
   useEffect(() => {
-    if (songData?.urlSong) {
+    if (songData?.url) {
       onStart();
       console.log("nana monita");
     }

@@ -26,7 +26,7 @@ export default function LoggedLayout(props) {
       .getDownloadURL()
       .then((urlSong) => {
         setSongData({
-          urlSong,
+          url: urlSong,
           image: albumImage,
           name: songName,
         });
