@@ -22,7 +22,7 @@ export default function Routes(props) {
         <Artists />
       </Route>
       <Route path="/artist/:id" exact>
-        <Artist />
+        <Artist playerSong={playerSong} />
       </Route>
       <Route path="/albums" exact>
         <Albums />
