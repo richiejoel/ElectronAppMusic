@@ -8,6 +8,7 @@ import Artist from "../pages/Artist";
 import Artists from "../pages/Artists";
 import Albums from "../pages/Albums";
 import Album from "../pages/Album";
+import Search from "../pages/Search";
 
 export default function Routes(props) {
   const { user, setReloadApp, playerSong } = props;
@@ -32,6 +33,9 @@ export default function Routes(props) {
       </Route>
       <Route path="/settings" exact>
         <Settings user={user} setReloadApp={setReloadApp} />
+      </Route>
+      <Route path="/search" exact>
+        <Search />
       </Route>
     </Switch>
   );

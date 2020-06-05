@@ -12,8 +12,18 @@
   z-index: 1;
 
   &__left {
-    i {
+    #go-back {
       font-size: 20px !important;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    #search {
+      margin-left: 20px;
+      width: auto;
+      height: 50%;
+      border-radius: 50px;
+      font-size: 12px !important;
       &:hover {
         cursor: pointer;
       }

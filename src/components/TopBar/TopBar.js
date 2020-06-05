@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Icon, Image } from "semantic-ui-react";
+import { Icon, Image, Input } from "semantic-ui-react";
 import { Link, withRouter } from "react-router-dom";
 import firebase from "../../utils/Firebase";
 import "firebase/auth";
@@ -39,7 +39,10 @@ function TopBar(props) {
     <>
       <div className="top-bar">
         <div className="top-bar__left">
-          <Icon name="angle left" onClick={goBack} />
+          <Icon name="angle left" id="go-back" onClick={goBack} />
+          <Link to="/search">
+            <Input icon="search" id="search" placeholder="Search" />
+          </Link>
         </div>
         <div className="top-bar__right">
           <Link to="/settings">
