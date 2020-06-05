@@ -28,7 +28,7 @@ export default function Routes(props) {
         <Albums />
       </Route>
       <Route path="/album/:id" exact>
-        <Album />
+        <Album playerSong={playerSong} />
       </Route>
       <Route path="/settings" exact>
         <Settings user={user} setReloadApp={setReloadApp} />
