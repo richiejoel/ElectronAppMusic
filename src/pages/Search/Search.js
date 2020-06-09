@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { withRouter } from "react-router-dom";
 import { map } from "lodash";
+import ViewSearch from "../../components/Search/ViewSearch";
+import ViewSearchAlbums from "../../components/Search/ViewSearchAlbums";
+import ViewSearchSongs from "../../components/Search/ViewSearchSongs";
 import firebase from "../../utils/Firebase";
 import "firebase/firestore";
 import "firebase/storage";
@@ -15,6 +18,10 @@ function Search(props) {
   const [isArtists, setIsArtists] = useState(false);
   const [isAlbums, setIsAlbums] = useState(false);
   const [isSongs, setIsSongs] = useState(false);
+  const [arraySearchItem, setArraySearchItem] = useState([]);
+  const [arraySearchArtists, setArraySearchArtists] = useState([]);
+  const [arraySearchAlbums, setArraySearchAlbums] = useState([]);
+  const [arraySearchSongs, setArraySearchSongs] = useState([]);
   const arrayAll = [];
   const arrayArtists = [];
   const arrayAlbums = [];
@@ -83,15 +90,25 @@ function Search(props) {
         let isAlbm = false;
         let isArts = false;
         let isSgn = false;
+        const arraySearchTempArts = [];
+        const arraySearchTempAlbm = [];
+        const arraySearchTempSgn = [];
         hits.forEach((hit) => {
           if (hit.type === "artists") {
             isArts = true;
+            arraySearchTempArts.push(hit);
           } else if (hit.type === "albums") {
             isAlbm = true;
+            arraySearchTempAlbm.push(hit);
           } else if (hit.type === "songs") {
             isSgn = true;
+            arraySearchTempSgn.push(hit);
           }
         });
+        //setArraySearchItem(arraySearchTemp);
+        setArraySearchArtists(arraySearchTempArts);
+        setArraySearchAlbums(arraySearchTempAlbm);
+        setArraySearchSongs(arraySearchTempSgn);
         if (isArts) {
           setIsArtists(true);
         } else {
@@ -129,10 +146,16 @@ function Search(props) {
   }
 
   return (
-    <div>
-      {isArtists === true ? <h2>Artists</h2> : null}
-      {isAlbums === true ? <h2>Albums</h2> : null}
-      {isSongs === true ? <h2>Songs</h2> : null}
+    <div className="search">
+      {isArtists === true ? (
+        <ViewSearch title="Artists" data={arraySearchArtists} />
+      ) : null}
+      {isAlbums === true ? (
+        <ViewSearchAlbums title="Albums" data={arraySearchAlbums} />
+      ) : null}
+      {isSongs === true ? (
+        <ViewSearchSongs title="Songs" data={arraySearchSongs} />
+      ) : null}
     </div>
   );
 }
