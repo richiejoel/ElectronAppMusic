@@ -13,6 +13,7 @@ function TopBar(props) {
   const [showModal, setShowModal] = useState(false);
   const [titleModal, setTitleModal] = useState(null);
   const [contentModal, setContentModal] = useState(null);
+  const [dataSearch, setDataSearch] = useState(initialValueForm());
 
   const logOut = () => {
     console.log("Cerrar sesión");
@@ -40,8 +41,16 @@ function TopBar(props) {
       <div className="top-bar">
         <div className="top-bar__left">
           <Icon name="angle left" id="go-back" onClick={goBack} />
-          <Link to="/search">
-            <Input icon="search" id="search" placeholder="Search" />
+          <Link to={`/search/${dataSearch.findString}`}>
+            <Input
+              icon="search"
+              id="search"
+              placeholder="Search"
+              onClick={() => console.log("clicked")}
+              onChange={(e) => {
+                setDataSearch({ ...dataSearch, findString: e.target.value });
+              }}
+            />
           </Link>
         </div>
         <div className="top-bar__right">
@@ -65,3 +74,9 @@ function TopBar(props) {
 }
 
 export default withRouter(TopBar);
+
+function initialValueForm() {
+  return {
+    findString: "",
+  };
+}
