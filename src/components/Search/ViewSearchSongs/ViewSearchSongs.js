@@ -11,7 +11,7 @@ import "./ViewSearchSongs.scss";
 const db = firebase.firestore(firebase);
 
 export default function ViewSearchSongs(props) {
-  const { title, data } = props;
+  const { title, data, playerSong } = props;
   return (
     <div className="view-search-songs">
       <h2>{title}</h2>
@@ -24,7 +24,11 @@ export default function ViewSearchSongs(props) {
               tablet={5}
               computer={4}
             >
-              <ViewSearchSongItem key={dataItem.objectID} data={dataItem} />
+              <ViewSearchSongItem
+                key={dataItem.objectID}
+                data={dataItem}
+                playerSong={playerSong}
+              />
             </Grid.Column>
           );
         })}
@@ -34,7 +38,7 @@ export default function ViewSearchSongs(props) {
 }
 
 function ViewSearchSongItem(props) {
-  const { data } = props;
+  const { data, playerSong } = props;
   const [bannerUrl, setBannerUrl] = useState(null);
   const [nameArtist, setNameArtist] = useState(null);
 
@@ -62,20 +66,25 @@ function ViewSearchSongItem(props) {
       });
   }, [data]);
 
+  const onPlay = () => {
+    playerSong(bannerUrl, data.name, data.fileName);
+  };
+
   return (
-    <Link to={`/album/${data.album}`}>
-      <div className="view-search-songs__item">
-        <div
-          className="avatar"
-          style={{ backgroundImage: `url('${bannerUrl}')` }}
-        >
-          <Icon name="play circle outline" />
-        </div>
+    <div className="view-search-songs__item">
+      <div
+        className="avatar"
+        style={{ backgroundImage: `url('${bannerUrl}')` }}
+        onClick={onPlay}
+      >
+        <Icon name="play circle outline" />
+      </div>
+      <Link to={`/album/${data.album}`}>
         <div className="description">
           <h3>{data.name}</h3>
           <h4>{nameArtist}</h4>
         </div>
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 }

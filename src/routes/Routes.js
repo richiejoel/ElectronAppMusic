@@ -35,7 +35,7 @@ export default function Routes(props) {
         <Settings user={user} setReloadApp={setReloadApp} />
       </Route>
       <Route path="/search/:findString" exact>
-        <Search />
+        <Search playerSong={playerSong} />
       </Route>
     </Switch>
   );

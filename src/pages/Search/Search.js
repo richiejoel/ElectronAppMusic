@@ -14,6 +14,7 @@ const db = firebase.firestore(firebase);
 const algoliasearch = require("algoliasearch");
 
 function Search(props) {
+  const { playerSong } = props;
   const [arraySearch, setArraySearch] = useState([]);
   const [isArtists, setIsArtists] = useState(false);
   const [isAlbums, setIsAlbums] = useState(false);
@@ -154,7 +155,11 @@ function Search(props) {
         <ViewSearchAlbums title="Albums" data={arraySearchAlbums} />
       ) : null}
       {isSongs === true ? (
-        <ViewSearchSongs title="Songs" data={arraySearchSongs} />
+        <ViewSearchSongs
+          title="Songs"
+          data={arraySearchSongs}
+          playerSong={playerSong}
+        />
       ) : null}
     </div>
   );
